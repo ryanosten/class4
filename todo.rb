@@ -4,5 +4,7 @@ require 'sinatra/reloader'
 @@todos = []
 
 get '/' do
-	erb :todos
+	erb :todos, locals:{
+		todo_list: @@todos
+	}
 end
